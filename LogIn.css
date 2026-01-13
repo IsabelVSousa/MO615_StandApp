@@ -2,7 +2,7 @@ body {
     background-color: #202020;
     display: grid;
     grid-template-columns: 5% 50% 40% 5%;
-    grid-template-rows: 15% 35% 30% 20%;
+    grid-template-rows: 15% 35% 43% 17%;
 }
 
 header {
@@ -21,6 +21,7 @@ main {
 form{
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     padding: 10px;
     gap: 0.75rem;
 }
@@ -46,14 +47,17 @@ button {
     width: 100%;
     padding: 0.3rem;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 8px;
     border-style: none;
 }
 
 input::placeholder {
     color: #999;       
     font-size: 0.8rem; 
-    font-style: italic; 
+}
+
+.g_form label{
+    margin-bottom: 6px;
 }
 
 button {
@@ -70,6 +74,13 @@ section {
     align-items: center;
 }
 
+.g_enlaces a,.g_enlaces p{
+    margin: 1px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 main>div>p {
     display: flex;

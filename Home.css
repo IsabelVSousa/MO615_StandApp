@@ -1,17 +1,192 @@
-body{
-    background-color: #202020;
-}
-
-h1,
-h2,
-p {
-    display: grid;
-    font-family: outfit;
-    color: white;
-}
-
-a {
-    display: grid;
-    font-family: outfit;
-    color: #FC3A05;
-}
+  /* --- VARIABLES Y RESET --- */
+        :root {
+            --primary-orange: #FF4500; /* Color naranja intenso */
+            --bg-dark: #1F2124;        /* Fondo general */
+            --card-bg: #363636;        /* Fondo de la tarjeta */
+            --text-white: #ffffff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+        }
+        /*BARRA SUPERIOR*/
+        .top-bar {
+            background-color: var(--primary-orange);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        /*NAVEGACIÓN PRINCIPAL*/
+        .main-nav {
+            background-color: var(--primary-orange);
+            margin: 20px 40px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-circle {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .logo-text-placeholder {
+            width: 100px;
+            height: 15px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+        .nav-links span {
+            border-right: 2px solid rgba(255,255,255,0.4);
+            padding-right: 20px;
+            cursor: pointer;
+        }
+        .nav-links span:last-child { border-right: none; }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 15px;
+            border: 1px solid white;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .btn-outline {
+            background: transparent;
+            color: white;
+        }
+        .btn-white {
+            background: white;
+            color: var(--primary-orange);
+        }
+        /*FORMULARIO DE BÚSQUEDA (PHP)*/
+        .search-container {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+        }
+        .search-form {
+            display: flex;
+            border: 2px solid var(--primary-orange);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #2a2a2a;
+        }
+        .date-input-wrapper {
+            flex: 1;
+            padding: 15px;
+            border-right: 2px solid var(--primary-orange);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #5d6d7e;
+        }
+        .search-input-wrapper {
+            flex: 2;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .search-input-wrapper input {
+            background: transparent;
+            border: none;
+            width: 100%;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+        .search-icon {
+            color: #23bb2a;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        /*TARJETA PRINCIPAL (HERO)*/
+        .hero-card {
+            background-color: var(--card-bg);
+            margin: 0 40px;
+            border-radius: 15px;
+            overflow: hidden;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-content {
+            padding: 50px;
+        }
+        .card-content h1 {
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+        .card-content p {
+            max-width: 400px;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        /*FOOTER*/
+        .card-footer {
+            background-color: #252525;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-book {
+            background: transparent;
+            border: 2px solid var(--primary-orange);
+            color: var(--primary-orange);
+            padding: 10px 30px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-book:hover {
+            background: var(--primary-orange);
+            color: white;
+        }
+        .card-info-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 1.1rem;
+        }
+        .location-icon {
+            background-color: var(--primary-orange);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
