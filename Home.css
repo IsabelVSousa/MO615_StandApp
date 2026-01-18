@@ -27,7 +27,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 /*NAVEGACIÓN PRINCIPAL*/
@@ -48,15 +48,15 @@ body {
 }
 
 .logo-circle {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background-color: white;
     border-radius: 50%;
 }
 
 .logo-text-placeholder {
     width: 100px;
-    height: 15px;
+    height: 14px;
     background-color: white;
     border-radius: 10px;
 }
@@ -66,7 +66,6 @@ body {
     gap: 20px;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 1.2rem;
 }
 
 .nav-links span {
@@ -90,7 +89,6 @@ body {
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
-    font-size: 0.9rem;
 }
 
 .btn-outline {
@@ -238,15 +236,27 @@ body {
     border-radius: 10px;
 }
 
+.outstand-card {
+    overflow: hidden;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-top: 50px;
+}
+
+
 .collection-list {
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+    display: flex;
+    flex-direction: row;
     border-bottom: 1px #7b7b7b;
     flex-flow: wrap;
     display: flex;
+    justify-content: space-around;
 }
 
 .next-event {
+    max-width: 350px;
     cursor: auto;
     flex: 0 31.5%;
     padding: 2rem;
