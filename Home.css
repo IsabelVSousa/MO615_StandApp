@@ -153,10 +153,10 @@ body {
 /*TARJETA PRINCIPAL (HERO)*/
 .hero-card {
     background-color: var(--card-bg);
-    margin: 0 40px;
+    margin: 0 20px;
     border-radius: 15px;
     overflow: hidden;
-    min-height: 400px;
+    min-height: 00px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -164,6 +164,7 @@ body {
 
 .card-content {
     padding: 50px;
+    min-height: 400px;
 }
 
 .card-content h1 {
@@ -180,22 +181,44 @@ body {
 }
 
 /* DESCTACADOS */
-.events-outstand{
+.outstand-card {
     background-color: var(--primary-orange);
-    min-height: 700px;
+    overflow: hidden;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-top: 50px;
 }
 
-.events-outstand h1{
+.events-outstand {
+    background-color: var(--card-bg);
+    margin: 0 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 520px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.events-content {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.events-content h1 {
     text-transform: uppercase;
-    margin-bottom: 30px;
     font-size: 2.5rem;
-    margin: 70px;
-    margin-top: 100px;
+    margin: 100px 40px 40px 40px;
 }
 
-.events-outstand a{
+.events-content a {
     color: var(--text-white);
     text-decoration: underline;
+    font-weight: bold;
     margin-bottom: 30px;
     font-size: 1.5rem;
     margin: 70px;
@@ -203,12 +226,61 @@ body {
     margin-left: 0px;
 }
 
-.event-header{
+.event-header {
     display: flex;
     flex-direction: row;
 }
 
-/*FOOTER*/
+/* PROXIMOS EVENTOS */
+
+.outline {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+.collection-list {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    border-bottom: 1px #7b7b7b;
+    flex-flow: wrap;
+    display: flex;
+}
+
+.next-event {
+    cursor: auto;
+    flex: 0 31.5%;
+    padding: 2rem;
+    position: relative;
+}
+
+h3.next-event {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+img.next-event {
+    object-fit: cover;
+    object-position: 50% 0%;
+    width: 100%;
+    height: 16rem;
+}
+
+.card-info-next {
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2.625rem;
+    display: flex;
+    flex-direction: row;
+}
+
+/* falta asignar a quien */
+
+/*ELEMENOTS FOOTER*/
 .card-footer {
     background-color: #252525;
     padding: 20px 50px;
@@ -251,4 +323,13 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+}
+
+/* FOOTER */
+
+.footer-right{
+    flex-flow: column;
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
 }
