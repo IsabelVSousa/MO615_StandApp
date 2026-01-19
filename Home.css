@@ -89,13 +89,13 @@ body {
     text-transform: uppercase;
 }
 
-.nav-links span {
+.nav-links a {
     border-right: 2px solid rgba(255, 255, 255, 0.4);
     padding-right: 20px;
     cursor: pointer;
 }
 
-.nav-links span:last-child {
+.nav-links a:last-child {
     border-right: none;
 }
 
