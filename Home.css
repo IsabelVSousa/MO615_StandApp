@@ -49,11 +49,29 @@ body {
 }
 
 .logo-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 
+.logo-circle {
     width: 45px;
     height: 45px;
     background-color: white;
     border-radius: 50%;
-}
+} */
 
 .logo-text-placeholder {
     width: 100px;
@@ -230,7 +248,7 @@ body {
 }
 
 .events-content a {
-    color: var(--text-white);
+    color: var(--primary-orange);
     text-decoration: underline;
     font-weight: bold;
     margin-bottom: 30px;
@@ -254,11 +272,10 @@ body {
 
 .next-card {
     overflow: hidden;
-    min-height: 800px;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: right;
-    margin-top: 50px;
 }
 
 .event-list {
@@ -270,7 +287,6 @@ body {
 .collection-list {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px #7b7b7b;
     flex-flow: wrap;
     display: flex;
     justify-content: space-around;
@@ -329,6 +345,7 @@ img.next-event {
 .btn-book {
     background: transparent;
     border: 2px solid var(--primary-orange);
+    border-radius: 5px;
     color: var(--primary-orange);
     padding: 10px 30px;
     font-weight: 900;
@@ -406,6 +423,7 @@ img.next-event {
 .footer-section {
     background-color: var(--primary-orange);
     padding-top: 2.5rem;
+    margin-top: 2.5rem;
     padding-bottom: 4.625rem;
 }
 
