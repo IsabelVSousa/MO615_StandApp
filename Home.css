@@ -21,6 +21,11 @@ body {
     color: var(--text-white);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /*BARRA SUPERIOR*/
 .top-bar {
     background-color: var(--primary-orange);
@@ -91,6 +96,8 @@ body {
 
 .nav-links a {
     border-right: 2px solid rgba(255, 255, 255, 0.4);
+    color: var(--text-white);
+    text-decoration: none;
     padding-right: 20px;
     cursor: pointer;
 }
@@ -353,6 +360,8 @@ img.next-event {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-book:hover {
