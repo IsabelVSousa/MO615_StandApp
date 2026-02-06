@@ -187,18 +187,29 @@
  } */
 
  /*RESPONSIVE MOVIL*/
- @media screen and (max-width: 800px) and (min-width: 600px) {
+ @media screen and (max-width: 1248px) {
+     .page {
+         grid-template-columns: 15% 60% 10% 15%;
+     }
+
      header {
          margin-right: 60px;
          display: flex;
          flex-direction: inherit;
          margin-left: 60px;
      }
-     header>p{
-        display: none;
+
+     header>p {
+         display: none;
      }
 
-     header>h1{
-        display: flex;
+     header>h1 {
+         display: flex;
+     }
+
+     main {
+         padding: 34px;
+         grid-column: 2 / 4;
+         grid-row: 4 / 4;
      }
  }
