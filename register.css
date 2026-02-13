@@ -310,5 +310,51 @@ body {
     padding: 2.5rem 5%;
 }
  
+/* MEDIA QUERIES */
 
+@media screen and (max-width: 992px) {
 
+    /* BARRA DE MENU NAVEGACION */
+
+    .navegacion-principal{
+        gap: 4.5%;
+        text-align: center;
+        width: 94%;
+    }
+
+    .enlaces-navegacion{
+        /* flex-direction: column; */
+        gap: 0.7rem;
+    }
+
+    .enlaces-navegacion span {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .botones-navegacion {
+        /* flex-direction: column; */
+        width: 100%;
+        align-items: center;
+    }
+
+    .navegacion-izquierda{
+        gap: 0px;
+    }
+    
+    .boton {
+        width: 80%;
+        text-align: center;
+    }
+
+    /* FORMULARIO REGISTRO */
+    .layout-registro{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .foto-perfil{
+        order: -1;
+    }
+
+}
