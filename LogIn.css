@@ -42,6 +42,7 @@
  header {
      grid-column: 2 / 3;
      grid-row: 2 / 4;
+     margin-right: 80px;
  }
 
  header>h1 {
@@ -191,7 +192,7 @@
  @media screen and (max-width: 1248px) {
      .page {
          /* grid-template-columns: 15% 60% 10% 15%; */
-         grid-template-columns: 10% 80% 0% 10%;
+         grid-template-columns: 05% 90% 0% 05%;
      }
 
      header {
