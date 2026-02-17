@@ -676,6 +676,19 @@ img.next-event {
     cursor: pointer;
 }
 
+/* MENU TOGGLE */
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+}
+
 /*RESPONSIVE MOVIL*/
 @media screen and (max-width: 765px) {
     .search-container {
@@ -698,6 +711,59 @@ img.next-event {
     .main-nav {
         margin-left: 20px;
     }
+
+    /* NAVBAR */
+    /* Mostrar icono hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ocultar menú normal */
+    .nav-links,
+    .nav-buttons {
+        display: block;
+    }
+
+    /* Ajustar contenedor nav */
+    .main-nav {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    /* Estilo del menú desplegable */
+    .main-nav>.nav-links,
+    .main-nav>.nav-buttons {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-orange);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 1rem 0;
+        gap: 1rem;
+        z-index: 1000;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+
+    /* Cuando el checkbox está activado */
+    .menu-checkbox:checked~.nav-links,
+    .menu-checkbox:checked~.nav-buttons {
+        display: flex;
+    }
+
+    /* Ajuste de botones dentro del menú */
+    .btn {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    /*llegas hasta aqui*/
 
     .card-info-right>.location-icon {
         display: none;
@@ -723,6 +789,11 @@ img.next-event {
         margin-left: 20px
     }
 
+    .events-outstand:first-child {
+        width: -webkit-fill-available;
+        
+    }
+
     .events-outstand:nth-child(2),
     .events-outstand-b,
     .next-event:nth-child(2),
@@ -739,7 +810,7 @@ img.next-event {
 
     .footer-wrap {
         justify-content: space-evenly;
-        align-items: center;
+        align-items: self-start;
         display: flex;
         padding: 40px;
         flex-direction: column-reverse;
@@ -777,38 +848,8 @@ img.next-event {
 
 /* RESPONSIVE IPAD */
 @media screen and (max-width: 1065px) {
-    /* .navegacion-principal {
-        gap: 4.5%;
-        text-align: center;
-        width: 94%;
-    }
 
-    .enlaces-navegacion {
-
-        gap: 0.7rem;
-    }
-
-    .enlaces-navegacion span {
-        border-right: none;
-        padding-right: 0;
-    }
-
-    .botones-navegacion {
-
-        width: 100%;
-        align-items: center;
-    }
-
-    .navegacion-izquierda {
-        gap: 0px;
-    }
-
-    .boton {
-        width: 80%;
-        text-align: center;
-    } */
-
-    .main-nav{
+    .main-nav {
         gap: 0;
     }
 
@@ -818,10 +859,22 @@ img.next-event {
         display: none;
     }
 
+    .outstand-card>.collection-list {
+        justify-content: center;
+    }
+
     .events-outstand:nth-child(2),
-    .events-outstand:nth-child(1){
+    .events-outstand:nth-child(1) {
         min-height: fit-content;
         max-height: 260px;
+        margin-bottom: 20px;
+        min-width: 320px;
+    }
+
+    .events-outstand-b {
+        min-height: 366px;
+        min-width: 686px;
+        margin-bottom: 40px;
     }
 
     .card-content {
@@ -832,4 +885,25 @@ img.next-event {
         flex: 01 31.5%;
     }
 
+}
+
+@media screen and (max-width: 1240px) {
+
+    .outstand-card>.collection-list {
+        justify-content: center;
+    }
+
+    .events-outstand:nth-child(2),
+    .events-outstand:nth-child(1) {
+        min-height: fit-content;
+        max-height: 260px;
+        margin-bottom: 20px;
+        min-width: 400px;
+    }
+
+    .events-outstand-b {
+        min-height: 366px;
+        min-width: 826px;
+        margin-bottom: 40px;
+    }
 }
