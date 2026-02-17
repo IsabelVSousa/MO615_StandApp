@@ -81,7 +81,7 @@ body {
 }
 
 .enlaces-navegacion span {
-    border-right: 2px solid rgba(255,255,255,0.4);
+    border-right: 2px solid rgba(255, 255, 255, 0.4);
     padding-right: 20px;
 }
 
@@ -230,7 +230,7 @@ body {
 
 .boton,
 .boton-cancelar,
-.boton-enviar{
+.boton-enviar {
     padding: 0.6rem 1.5rem;
     border-radius: 0.4rem;
 }
@@ -309,52 +309,192 @@ body {
     display: flex;
     padding: 2.5rem 5%;
 }
- 
+
+/* MENU TOGGLE */
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+}
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 992px) {
 
     /* BARRA DE MENU NAVEGACION */
 
-    .navegacion-principal{
-        gap: 4.5%;
+    .navegacion-principal {
+        gap: 0;
         text-align: center;
         width: 94%;
     }
 
-    .enlaces-navegacion{
-        /* flex-direction: column; */
-        gap: 0.7rem;
-    }
-
-    .enlaces-navegacion span {
-        border-right: none;
-        padding-right: 0;
+    .navegacion-izquierda {
+        gap: 0px;
+        text-align: left;
     }
 
     .botones-navegacion {
-        /* flex-direction: column; */
+
         width: 100%;
         align-items: center;
     }
 
-    .navegacion-izquierda{
-        gap: 0px;
-    }
-    
     .boton {
         width: 80%;
         text-align: center;
     }
 
+    .enlaces-navegacion {
+
+        gap: 0.7rem;
+    }
+
+    /*
+    
+        .enlaces-navegacion span {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+
+
+
+        */
+
+
     /* FORMULARIO REGISTRO */
-    .layout-registro{
+
+    .layout-registro {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .foto-perfil{
+    .foto-perfil {
         order: -1;
+    }
+
+    /* .formulario-registro {
+        grid-template-columns: 1fr;
+    } */
+
+    .acciones-formulario {
+        grid-column: span 1;
+        justify-content: center;
+    }
+
+    /* FOOTER */
+
+    /* .footer-wrap {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    } */
+}
+
+/* MOVIL - 576px */
+@media screen and (max-width: 742px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navegacion-principal {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .enlaces-navegacion,
+    .botones-navegacion {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-orange);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        gap: 1rem;
+        z-index: 1000;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    } 
+
+
+    .menu-checkbox:checked~.enlaces-navegacion,
+    .menu-checkbox:checked~.botones-navegacion {
+        display: flex;
+    }
+
+    .boton {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    /* FORM */
+
+    .formulario-registro {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-registro {
+        padding: 2rem 1rem;
+    }
+
+    .tarjeta-registro {
+        padding: 1.5rem;
+    }
+
+    .titulo-registro {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .placeholder-foto {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .acciones-formulario {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .boton-cancelar,
+    .boton-enviar {
+        width: 100%;
+    }
+
+    /* FOOTER */
+
+    .footer-wrap {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-left: 0;
+        padding-right: 0;
     }
 
 }
